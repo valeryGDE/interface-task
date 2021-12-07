@@ -2,16 +2,16 @@ package com.learn.java.basic.entity;
 
 import java.util.Objects;
 
-public class ChristmasTree implements Good{
+public class ChristmasTree implements Good, Comparable<ChristmasTree> {
 
     private String name;
-    private int height;
+    private double height;
     private double price;
 
     public ChristmasTree() {
     }
 
-    public ChristmasTree(String name, int height, double price) {
+    public ChristmasTree(String name, double height, double price) {
         this.name = name;
         this.height = height;
         this.price = price;
@@ -25,11 +25,11 @@ public class ChristmasTree implements Good{
         this.name = name;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -71,5 +71,16 @@ public class ChristmasTree implements Good{
     @Override
     public String name() {
         return name;
+    }
+
+    @Override
+    public int compareTo(ChristmasTree o) {
+        if (this.height > o.height) {
+            return 1;
+        } else if (this.height < o.height) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
