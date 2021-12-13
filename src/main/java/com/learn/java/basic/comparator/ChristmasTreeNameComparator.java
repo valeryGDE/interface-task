@@ -1,4 +1,6 @@
-package com.learn.java.basic.entity;
+package com.learn.java.basic.comparator;
+
+import com.learn.java.basic.entity.ChristmasTree;
 
 import java.util.Comparator;
 

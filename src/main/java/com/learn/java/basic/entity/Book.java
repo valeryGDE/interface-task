@@ -83,4 +83,9 @@ public class Book implements Good{
     public String name() {
         return name;
     }
+
+    @Override
+    public int compareTo(Good o) {
+        return (int)(this.price - o.price());
+    }
 }

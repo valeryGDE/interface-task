@@ -5,13 +5,13 @@ import java.util.Objects;
 public class Appliance implements Good{
 
     private double price;
-    private String manufacturer;
+    private Manufacturer manufacturer;
     private String name;
 
     public Appliance() {
     }
 
-    public Appliance(double price, String manufacturer, String type) {
+    public Appliance(double price, Manufacturer manufacturer, String type) {
         this.price = price;
         this.manufacturer = manufacturer;
         this.name = type;
@@ -25,11 +25,11 @@ public class Appliance implements Good{
         this.price = price;
     }
 
-    public String getManufacturer() {
+    public Manufacturer getManufacturer() {
         return manufacturer;
     }
 
-    public void setManufacturer(String manufacturer) {
+    public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
     }
 
@@ -71,5 +71,10 @@ public class Appliance implements Good{
     @Override
     public String name() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Good o) {
+        return (int)(this.price - o.price());
     }
 }

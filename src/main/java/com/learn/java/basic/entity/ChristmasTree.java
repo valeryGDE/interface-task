@@ -2,7 +2,7 @@ package com.learn.java.basic.entity;
 
 import java.util.Objects;
 
-public class ChristmasTree implements Good, Comparable<ChristmasTree> {
+public class ChristmasTree implements Good {
 
     private String name;
     private double height;
@@ -74,13 +74,7 @@ public class ChristmasTree implements Good, Comparable<ChristmasTree> {
     }
 
     @Override
-    public int compareTo(ChristmasTree o) {
-        if (this.height > o.height) {
-            return 1;
-        } else if (this.height < o.height) {
-            return -1;
-        } else {
-            return 0;
-        }
+    public int compareTo(Good o) {
+        return (int)(this.price - o.price());
     }
 }

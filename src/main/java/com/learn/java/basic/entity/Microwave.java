@@ -10,7 +10,7 @@ public class Microwave extends Appliance {
     public Microwave() {
     }
 
-    public Microwave(double price, String manufacturer, String name, int outputPowerRange, String ovenType) {
+    public Microwave(double price, Manufacturer manufacturer, String name, int outputPowerRange, String ovenType) {
         super(price, manufacturer, name);
         this.outputPowerRange = outputPowerRange;
         this.ovenType = ovenType;

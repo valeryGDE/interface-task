@@ -10,7 +10,7 @@ public class Refrigerator extends Appliance {
     public Refrigerator() {
     }
 
-    public Refrigerator(double price, String manufacturer, String name, int refrigeratorCapacity, String configuration) {
+    public Refrigerator(double price, Manufacturer manufacturer, String name, int refrigeratorCapacity, String configuration) {
         super(price, manufacturer, name);
         this.refrigeratorCapacity = refrigeratorCapacity;
         this.configuration = configuration;
